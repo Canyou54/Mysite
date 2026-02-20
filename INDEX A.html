@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Automating Daily Tasks with n8n - Research Plan</title>
+    <title>أتمتة المهام اليومية باستخدام n8n - خطة بحث</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Cairo', sans-serif;
         }
         
         :root {
@@ -26,7 +26,7 @@
             --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --n8n-color: #13c9ca;
             --openai: #10a37f;
-            --ai-agent: #8e44ad;
+            --ai-agent: #85a7fa;
             --github: #333;
             --slack: #4a154b;
             --notion: #000;
@@ -44,7 +44,7 @@
             color: var(--dark);
             min-height: 100vh;
             overflow-x: hidden;
-            text-align: left;
+            text-align: right;
             font-size: 14px;
         }
         
@@ -104,7 +104,7 @@
             font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 8px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
+            background: linear-gradient(to left, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -130,7 +130,7 @@
         @keyframes fadeInRight {
             0% {
                 opacity: 0;
-                transform: translateX(-20px);
+                transform: translateX(20px);
             }
             100% {
                 opacity: 1;
@@ -184,15 +184,15 @@
             color: var(--primary);
             margin: 20px 0 12px;
             font-size: 1.4rem;
-            border-left: 4px solid var(--secondary);
-            padding-left: 12px;
-            animation: slideInLeft 0.8s ease-out 2s both;
+            border-right: 4px solid var(--secondary);
+            padding-right: 12px;
+            animation: slideInRight 0.8s ease-out 2s both;
         }
         
-        @keyframes slideInLeft {
+        @keyframes slideInRight {
             0% {
                 opacity: 0;
-                transform: translateX(-30px);
+                transform: translateX(30px);
             }
             100% {
                 opacity: 1;
@@ -232,7 +232,7 @@
         }
         
         ul, ol {
-            margin-left: 20px;
+            margin-right: 20px;
             margin-bottom: 18px;
             animation: fadeIn 1s ease-out 2.6s both;
         }
@@ -240,7 +240,7 @@
         li {
             margin-bottom: 8px;
             line-height: 1.5;
-            padding-left: 8px;
+            padding-right: 8px;
             position: relative;
             font-size: 0.95rem;
             animation: slideInListItem 0.5s ease-out forwards;
@@ -259,7 +259,7 @@
         @keyframes slideInListItem {
             0% {
                 opacity: 0;
-                transform: translateX(-20px);
+                transform: translateX(20px);
             }
             100% {
                 opacity: 1;
@@ -271,9 +271,9 @@
             content: "•";
             color: var(--accent);
             font-weight: bold;
-            margin-right: 8px;
+            margin-left: 8px;
             position: absolute;
-            left: -12px;
+            right: -12px;
         }
         
         .card {
@@ -282,7 +282,7 @@
             padding: 18px;
             margin: 15px 0;
             box-shadow: var(--shadow);
-            border-left: 4px solid var(--secondary);
+            border-right: 4px solid var(--secondary);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 1px solid var(--light);
             animation: cardAppear 0.8s ease-out 3s both;
@@ -303,7 +303,7 @@
         .card:hover {
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 15px 30px rgba(52, 152, 219, 0.15);
-            border-left-color: var(--accent);
+            border-right-color: var(--accent);
             animation: cardHoverPulse 2s infinite 4s;
         }
         
@@ -324,7 +324,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            animation: fadeInLeft 0.8s ease-out 3.2s both;
+            animation: fadeInRight 0.8s ease-out 3.2s both;
         }
         
         .card-title i {
@@ -453,7 +453,7 @@
             background: var(--gradient);
             color: white;
             padding: 14px;
-            text-align: left;
+            text-align: right;
             font-weight: 600;
             font-size: 0.9rem;
             animation: tableHeaderSlide 0.8s ease-out 4s both;
@@ -462,7 +462,7 @@
         @keyframes tableHeaderSlide {
             0% {
                 opacity: 0;
-                transform: translateX(-20px);
+                transform: translateX(20px);
             }
             100% {
                 opacity: 1;
@@ -473,7 +473,7 @@
         td {
             padding: 12px 14px;
             border-bottom: 1px solid #eee;
-            text-align: left;
+            text-align: right;
             font-size: 0.9rem;
             animation: tableRowAppear 0.5s ease-out forwards;
             opacity: 0;
@@ -508,7 +508,7 @@
             padding: 18px;
             border-radius: 12px;
             margin: 20px 0;
-            border-left: 4px solid var(--accent);
+            border-right: 4px solid var(--accent);
             font-size: 0.95rem;
             animation: highlightPulse 3s infinite 4s;
             transform-origin: center;
@@ -707,7 +707,7 @@
         .logo {
             position: fixed;
             top: 15px;
-            left: 15px;
+            right: 15px;
             color: var(--primary);
             font-weight: 700;
             font-size: 1rem;
@@ -722,7 +722,7 @@
         @keyframes logoSlide {
             0% {
                 opacity: 0;
-                transform: translateX(-50px);
+                transform: translateX(50px);
             }
             100% {
                 opacity: 1;
@@ -731,7 +731,7 @@
         }
         
         .logo i {
-            margin-right: 8px;
+            margin-left: 8px;
             color: var(--n8n-color);
             animation: logoSpin 4s linear infinite 4s;
         }
@@ -748,7 +748,7 @@
             padding: 5px 12px;
             border-radius: 20px;
             font-size: 0.8rem;
-            margin-right: 6px;
+            margin-left: 6px;
             margin-bottom: 6px;
             border: 1px solid var(--secondary);
             animation: tagAppear 0.5s ease-out forwards;
@@ -763,7 +763,7 @@
         @keyframes tagAppear {
             0% {
                 opacity: 0;
-                transform: scale(0) rotate(-10deg);
+                transform: scale(0) rotate(10deg);
             }
             100% {
                 opacity: 1;
@@ -799,7 +799,7 @@
         
         .kpi i {
             color: var(--secondary);
-            margin-right: 8px;
+            margin-left: 8px;
             animation: kpiIconSpin 3s linear infinite 4s;
         }
         
@@ -833,14 +833,14 @@
             flex: 1;
             background: linear-gradient(135deg, #fadbd8, #f5b7b1);
             padding: 15px;
-            border-right: 1px solid #e6b0aa;
+            border-left: 1px solid #e6b0aa;
             animation: challengeSlide 0.8s ease-out 4s both;
         }
         
         @keyframes challengeSlide {
             0% {
                 opacity: 0;
-                transform: translateX(-30px);
+                transform: translateX(30px);
             }
             100% {
                 opacity: 1;
@@ -858,7 +858,7 @@
         @keyframes solutionSlide {
             0% {
                 opacity: 0;
-                transform: translateX(30px);
+                transform: translateX(-30px);
             }
             100% {
                 opacity: 1;
@@ -893,7 +893,7 @@
             top: 0;
             background: var(--gradient);
             animation: phaseExpand 1s ease-out 4s both;
-            transform-origin: left;
+            transform-origin: right;
         }
         
         @keyframes phaseExpand {
@@ -930,7 +930,7 @@
             border-radius: 15px;
             padding: 20px;
             margin: 20px 0;
-            border-left: 4px solid var(--secondary);
+            border-right: 4px solid var(--secondary);
             animation: projectDemoAppear 1s ease-out 3.6s both;
         }
         
@@ -1039,7 +1039,7 @@
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 18px;
-            border-left: 4px solid var(--accent);
+            border-right: 4px solid var(--accent);
             color: white;
             animation: workflowHeaderSlide 0.8s ease-out 4s both;
         }
@@ -1282,7 +1282,7 @@
             content: '';
             position: absolute;
             top: -4px;
-            left: 0;
+            right: 0;
             width: 12px;
             height: 12px;
             background: var(--accent);
@@ -1291,10 +1291,10 @@
         }
         
         .connection-line::after {
-            content: '→';
+            content: '←';
             position: absolute;
             top: -12px;
-            left: -5px;
+            right: -5px;
             color: var(--accent);
             font-size: 1.2rem;
             animation: arrowMove 2s infinite 4s;
@@ -1302,11 +1302,11 @@
         
         @keyframes arrowMove {
             0%, 100% {
-                left: -5px;
+                right: -5px;
                 opacity: 0.8;
             }
             50% {
-                left: 5px;
+                right: 5px;
                 opacity: 1;
             }
         }
@@ -1464,7 +1464,7 @@
                 transform: translateY(0) rotate(0);
             }
             50% {
-                transform: translateY(-5px) rotate(5deg);
+                transform: translateY(-5px) rotate(-5deg);
             }
         }
         
@@ -1497,7 +1497,7 @@
             border-radius: 15px;
             padding: 20px;
             margin: 20px 0;
-            border-left: 4px solid var(--secondary);
+            border-right: 4px solid var(--secondary);
             animation: systemOverviewAppear 1s ease-out 3.6s both;
         }
         
@@ -1536,7 +1536,7 @@
             padding: 15px;
             border-radius: 10px;
             box-shadow: var(--shadow);
-            border-left: 4px solid var(--secondary);
+            border-right: 4px solid var(--secondary);
             transition: all 0.3s ease;
             animation: integrationItemAppear 0.6s ease-out forwards;
             opacity: 0;
@@ -1561,7 +1561,7 @@
         .integration-item:hover {
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 10px 25px rgba(52, 152, 219, 0.15);
-            border-left-color: var(--accent);
+            border-right-color: var(--accent);
             animation: integrationItemHover 2s infinite 4s;
         }
         
@@ -1690,7 +1690,7 @@
             border-radius: 10px;
             margin: 15px 0;
             min-height: 80px;
-            text-align: left;
+            text-align: right;
             font-family: 'Courier New', monospace;
             overflow-x: auto;
             font-size: 0.85rem;
@@ -1721,7 +1721,7 @@
         @keyframes linkedinBtnAppear {
             0% {
                 opacity: 0;
-                transform: translateX(-50px) rotate(180deg);
+                transform: translateX(50px) rotate(180deg);
             }
             100% {
                 opacity: 1;
@@ -1761,7 +1761,7 @@
         #slide-progress {
             position: fixed;
             top: 0;
-            left: 0;
+            right: 0;
             height: 4px;
             background: var(--gradient);
             width: 0%;
@@ -1856,7 +1856,7 @@
             }
             
             .challenge {
-                border-right: none;
+                border-left: none;
                 border-bottom: 1px solid #e6b0aa;
             }
             
@@ -1905,7 +1905,7 @@
             
             .logo {
                 top: 10px;
-                left: 10px;
+                right: 10px;
                 font-size: 0.9rem;
                 padding: 5px 10px;
             }
@@ -1954,46 +1954,46 @@
     </style>
 </head>
 <body>
-    <!-- Language button -->
-    <a href="INDEX A.html" class="linkedin-btn" onclick="switchToArabic()">
+    <!-- زر اللغة -->
+    <a href="index E.html" class="linkedin-btn" onclick="switchToEnglish()">
         <i class="fas fa-language"></i>
     </a>
     
-    <!-- Navigation buttons -->
+    <!-- أزرار التنقل -->
     <div class="controls">
         <button class="btn" id="prevBtn">
-            <i class="fas fa-arrow-left"></i>
-        </button>
-        <button class="btn" id="nextBtn">
             <i class="fas fa-arrow-right"></i>
         </button>
+        <button class="btn" id="nextBtn">
+            <i class="fas fa-arrow-left"></i>
+        </button>
     </div>
     
-    <!-- Navigation dots -->
+    <!-- نقاط التنقل -->
     <div class="nav-dots" id="navDots"></div>
     
-    <!-- Progress bar -->
+    <!-- شريط التقدم -->
     <div id="slide-progress"></div>
     
-    <!-- Logo -->
+    <!-- الشعار -->
     <div class="logo">
-        <i class="fas fa-robot"></i> n8n Research
+        <i class="fas fa-robot"></i> بحث n8n
     </div>
     
-    <!-- Slide 1: Title -->
+    <!-- الشريحة 1: العنوان -->
     <div class="container active" id="slide1">
         <div class="researcher-info">
-            <div class="researcher-name">Studant : Yousif ELtjani Mohammed Omar</div>
-            <div class="research-purpose">Research Plan </div>
-            <div class="degree-badge">Automation System for Daily Task Processing </div>
+            <div class="researcher-name">  الطالب : يوسف التجاني محمد عمر  </div>
+            <div class="research-purpose">خطة  البحث   </div>
+            <div class="degree-badge">أتمتة المهام اليومية بإستخدام n8n </div>
         </div>
         
         <div class="slide-header">
             <div>
-                <h1 class="slide-title">Developing an Intelligent Automation System for Daily Task Processing</h1>
-                <p class="slide-subtitle">Using the n8n Platform: An Applied Study</p>
+                <h1 class="slide-title">تطوير نظام أتمتة ذكي لمعالجة المهام اليومية</h1>
+                <p class="slide-subtitle">باستخدام منصة n8n: دراسة تطبيقية</p>
             </div>
-            <div class="slide-number">1</div>
+            <div class="slide-number">١</div>
         </div>
         
         <div class="content">
@@ -2001,154 +2001,154 @@
                 <div style="font-size: 3rem; color: var(--secondary); margin-bottom: 15px;" class="scale-pulse">
                     <i class="fas fa-cogs"></i>
                 </div>
-                <h2 class="animation-delay-4s">Research Presentation</h2>
+                <h2 class="animation-delay-4s">عرض البحث</h2>
                 <p style="font-size: 1.1rem; margin-top: 10px; color: var(--dark);" class="animation-delay-4s">
-                    Enhancing Productivity Through Workflow Automation
+                    تعزيز الإنتاجية من خلال أتمتة سير العمل
                 </p>
             </div>
             
             <div class="stats">
                 <div class="stat scale-in">
-                    <div class="stat-value">30-50%</div>
-                    <div class="stat-label">Productivity Improvement</div>
+                    <div class="stat-value">٣٠-٥٠٪</div>
+                    <div class="stat-label">تحسين الإنتاجية</div>
                 </div>
                 <div class="stat scale-in">
-                    <div class="stat-value">60-80%</div>
-                    <div class="stat-label">Error Reduction</div>
+                    <div class="stat-value">٦٠-٨٠٪</div>
+                    <div class="stat-label">تقليل الأخطاء</div>
                 </div>
                 <div class="stat scale-in">
-                    <div class="stat-value">15-25</div>
-                    <div class="stat-label">Hours Saved Weekly</div>
+                    <div class="stat-value">١٥-٢٥</div>
+                    <div class="stat-label">ساعات موفرة أسبوعياً</div>
                 </div>
             </div>
             
             <div style="text-align: center; margin-top: 25px;" class="animation-delay-4s">
                 <p style="font-style: italic; color: var(--secondary); font-size: 1rem;">
-                    "Automation is not about replacing humans, but enhancing human capabilities"
+                    "الأتمتة ليست لاستبدال البشر، بل لتعزيز القدرات البشرية"
                 </p>
             </div>
             
             <div class="highlight scale-pulse">
                 <p style="text-align: center; font-weight: 600; color: var(--primary); font-size: 0.95rem;">
-                    Research  Plan presentation for Master's degree in Information Technology <br>
-                    Under the supervision of : D . Adam
+                    عرض البحث  لنيل درجة الماجستير في   / تقانة المعلومات <br>
+                    تحت إشراف : دكتور . آدم  
                 </p>
             </div>
         </div>
     </div>
     
-    <!-- Slide 2: Research Problem and Importance -->
+    <!-- الشريحة 2: مشكلة البحث وأهميته -->
     <div class="container" id="slide2">
         <div class="slide-header">
             <div>
-                <h1 class="slide-title">Research Problem and Importance</h1>
-                <p class="slide-subtitle">Addressing Productivity Challenges</p>
+                <h1 class="slide-title">مشكلة البحث وأهميته</h1>
+                <p class="slide-subtitle">معالجة تحديات الإنتاجية</p>
             </div>
-            <div class="slide-number">2</div>
+            <div class="slide-number">٢</div>
         </div>
         
         <div class="content">
             <div class="card scale-in">
                 <div class="card-title">
                     <i class="fas fa-exclamation-triangle"></i>
-                    Research Problem
+                    مشكلة البحث
                 </div>
-                <p>Organizations and individuals face challenges in managing repetitive daily tasks that consume significant time and effort, negatively impacting productivity and efficiency.</p>
+                <p>تواجه المؤسسات والأفراد تحديات في إدارة المهام اليومية المتكررة التي تستهلك وقتاً وجهداً كبيرين، مما يؤثر سلباً على الإنتاجية والكفاءة.</p>
                 <ul>
-                    <li>Time-consuming manual processes</li>
-                    <li>Increased human errors in repetitive tasks</li>
-                    <li>High operational costs</li>
-                    <li>Limited scalability of manual processes</li>
-                    <li>Employee burnout from monotonous work</li>
+                    <li>العمليات اليدوية المستهلكة للوقت</li>
+                    <li>زيادة الأخطاء البشرية في المهام المتكررة</li>
+                    <li>ارتفاع التكاليف التشغيلية</li>
+                    <li>محدودية قابلية التوسع في العمليات اليدوية</li>
+                    <li>إرهاق الموظفين من العمل الرتيب</li>
                 </ul>
             </div>
             
-            <h2 class="animation-delay-4s">Research Importance</h2>
+            <h2 class="animation-delay-4s">أهمية البحث</h2>
             <div class="grid">
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-chart-line"></i> Efficiency Improvement</div>
-                    <p>Reducing manual intervention and streamlining processes, allowing focus on high-value tasks.</p>
+                    <div class="card-title"><i class="fas fa-chart-line"></i> تحسين الكفاءة</div>
+                    <p>تقليل التدخل اليدوي وتبسيط العمليات، مما يسمح بالتركيز على المهام عالية القيمة.</p>
                 </div>
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-dollar-sign"></i> Cost Reduction</div>
-                    <p>Reducing expenses associated with repetitive manual tasks and error correction, improving ROI.</p>
+                    <div class="card-title"><i class="fas fa-dollar-sign"></i> خفض التكاليف</div>
+                    <p>تقليل النفقات المرتبطة بالمهام اليدوية المتكررة وتصحيح الأخطاء، وتحسين العائد على الاستثمار.</p>
                 </div>
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-code-branch"></i> Open Source Solutions</div>
-                    <p>Providing customizable automation without high cost using the n8n platform, eliminating vendor lock-in.</p>
+                    <div class="card-title"><i class="fas fa-code-branch"></i> الحلول مفتوحة المصدر</div>
+                    <p>توفير أتمتة قابلة للتخصيص بدون تكلفة باستخدام منصة n8n، مما يلغي الاعتماد على البائعين.</p>
                 </div>
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-link"></i> System Integration</div>
-                    <p>Enhancing connections between different applications and platforms, creating unified workflows.</p>
+                    <div class="card-title"><i class="fas fa-link"></i> تكامل الأنظمة</div>
+                    <p>تعزيز الروابط بين التطبيقات والمنصات المختلفة، مما يخلق سير عمل موحد.</p>
                 </div>
             </div>
             
             <div class="highlight scale-pulse">
                 <p style="text-align: center; font-weight: 600; color: var(--primary);">
-                    This research contributes to the field of workflow automation by providing<br>
-                    an applied framework using open-source technology for academic and industrial applications
+                    يساهم هذا البحث في مجال أتمتة سير العمل من خلال تقديم<br>
+                    إطار تطبيقي باستخدام تقنية مفتوحة المصدر للتطبيقات الأكاديمية والصناعية
                 </p>
             </div>
         </div>
     </div>
     
-    <!-- Slide 3: Research Objectives -->
+    <!-- الشريحة 3: أهداف البحث -->
     <div class="container" id="slide3">
         <div class="slide-header">
             <div>
-                <h1 class="slide-title">Research Objectives</h1>
-                <p class="slide-subtitle">Goals of the Applied Study</p>
+                <h1 class="slide-title">أهداف البحث</h1>
+                <p class="slide-subtitle">أهداف الدراسة التطبيقية</p>
             </div>
-            <div class="slide-number">3</div>
+            <div class="slide-number">٣</div>
         </div>
         
         <div class="content">
             <div class="highlight scale-pulse" style="background: var(--gradient); color: white;">
                 <p style="font-style: italic; text-align: center; font-size: 1rem;">
-                    "To develop and evaluate an applied framework for automating daily tasks using n8n,<br>
-                    contributing to academic knowledge and practical application"
+                    "تطوير وتقييم إطار تطبيقي لأتمتة المهام اليومية باستخدام n8n،<br>
+                    والمساهمة في المعرفة الأكاديمية والتطبيق العملي"
                 </p>
             </div>
             
             <div class="grid">
                 <div class="card scale-in">
-                    <div class="card-title">1. Platform Analysis</div>
-                    <p>Studying the capabilities of the n8n platform in automating daily tasks across various fields and industries.</p>
+                    <div class="card-title">١. تحليل المنصة</div>
+                    <p>دراسة إمكانيات منصة n8n في أتمتة المهام اليومية في مختلف المجالات والصناعات.</p>
                     <div style="margin-top: 8px;">
-                        <span class="tag">Technical Assessment</span>
-                        <span class="tag">Feature Analysis</span>
+                        <span class="tag">تقييم تقني</span>
+                        <span class="tag">تحليل الميزات</span>
                     </div>
                 </div>
                 <div class="card scale-in">
-                    <div class="card-title">2. Practical Application</div>
-                    <p>Designing and implementing practical automation scenarios for real-world applications with measurable results.</p>
+                    <div class="card-title">٢. التطبيق العملي</div>
+                    <p>تصميم وتنفيذ سيناريوهات أتمتة عملية لتطبيقات العالم الحقيقي بنتائج قابلة للقياس.</p>
                     <div style="margin-top: 8px;">
-                        <span class="tag">Workflow Design</span>
-                        <span class="tag">Scenario Development</span>
+                        <span class="tag">تصميم سير العمل</span>
+                        <span class="tag">تطوير السيناريوهات</span>
                     </div>
                 </div>
                 <div class="card scale-in">
-                    <div class="card-title">3. Impact Measurement</div>
-                    <p>Measuring the impact of automation on productivity, efficiency, error rates, and operational costs.</p>
+                    <div class="card-title">٣. قياس التأثير</div>
+                    <p>قياس تأثير الأتمتة على الإنتاجية والكفاءة ومعدلات الأخطاء والتكاليف التشغيلية.</p>
                     <div style="margin-top: 8px;">
-                        <span class="tag">KPI Analysis</span>
-                        <span class="tag">Performance Metrics</span>
+                        <span class="tag">تحليل مؤشرات الأداء</span>
+                        <span class="tag">مقاييس الأداء</span>
                     </div>
                 </div>
                 <div class="card scale-in">
-                    <div class="card-title">4. Framework Development</div>
-                    <p>Creating reusable frameworks for different organizational environments and sectors.</p>
+                    <div class="card-title">٤. تطوير إطار العمل</div>
+                    <p>إنشاء أطر قابلة لإعادة الاستخدام لبيئات تنظيمية وقطاعات مختلفة.</p>
                     <div style="margin-top: 8px;">
-                        <span class="tag">Template Creation</span>
-                        <span class="tag">Best Practices</span>
+                        <span class="tag">إنشاء قوالب</span>
+                        <span class="tag">أفضل الممارسات</span>
                     </div>
                 </div>
                 <div class="card scale-in">
-                    <div class="card-title">5. Academic Contribution</div>
-                    <p>Providing documented case studies and methodologies for academic reference and future research.</p>
+                    <div class="card-title">٥. المساهمة الأكاديمية</div>
+                    <p>تقديم دراسات حالة موثقة ومنهجيات للمرجعية الأكاديمية والأبحاث المستقبلية.</p>
                     <div style="margin-top: 8px;">
-                        <span class="tag">Case Study</span>
-                        <span class="tag">Research Documentation</span>
+                        <span class="tag">دراسة حالة</span>
+                        <span class="tag">توثيق البحث</span>
                     </div>
                 </div>
             </div>
@@ -2156,77 +2156,77 @@
             <div class="card scale-in" style="margin-top: 20px;">
                 <div class="card-title">
                     <i class="fas fa-graduation-cap"></i>
-                    Academic Significance
+                    الأهمية الأكاديمية
                 </div>
-                <p>This research bridges the gap between theoretical automation concepts and practical application, providing empirical data and methodologies that contribute to the academic body of knowledge in workflow automation and business process improvement.</p>
+                <p>يسد هذا البحث الفجوة بين مفاهيم الأتمتة النظرية والتطبيق العملي، مما يوفر بيانات تجريبية ومنهجيات تساهم في الجسم الأكاديمي للمعرفة في أتمتة سير العمل وتحسين العمليات التجارية.</p>
             </div>
         </div>
     </div>
     
-    <!-- Slide 4: Theoretical Framework -->
+    <!-- الشريحة 4: الإطار النظري -->
     <div class="container" id="slide4">
         <div class="slide-header">
             <div>
-                <h1 class="slide-title">Theoretical Framework</h1>
-                <p class="slide-subtitle">Core Concepts and Previous Studies</p>
+                <h1 class="slide-title">الإطار النظري</h1>
+                <p class="slide-subtitle">المفاهيم الأساسية والدراسات السابقة</p>
             </div>
-            <div class="slide-number">4</div>
+            <div class="slide-number">٤</div>
         </div>
         
         <div class="content">
-            <h2 class="animation-delay-4s">Core Concepts</h2>
+            <h2 class="animation-delay-4s">المفاهيم الأساسية</h2>
             
-            <h3 class="animation-delay-4s">Workflow Automation</h3>
+            <h3 class="animation-delay-4s">أتمتة سير العمل</h3>
             <div class="grid">
                 <div class="card scale-in">
-                    <div class="card-title">Full Automation</div>
-                    <p>Complete transfer of tasks to automated systems without human intervention, suitable for rule-based processes.</p>
+                    <div class="card-title">الأتمتة الكاملة</div>
+                    <p>النقل الكامل للمهام إلى أنظمة آلية دون تدخل بشري، مناسب للعمليات القائمة على القواعد.</p>
                 </div>
                 <div class="card scale-in">
-                    <div class="card-title">Partial Automation</div>
-                    <p>Collaboration between humans and machines where specific steps are automated, while maintaining human oversight when needed.</p>
+                    <div class="card-title">الأتمتة الجزئية</div>
+                    <p>التعاون بين البشر والآلات حيث يتم أتمتة خطوات محددة، مع الحفاظ على الإشراف البشري عند الحاجة.</p>
                 </div>
                 <div class="card scale-in">
-                    <div class="card-title">Intelligent Automation</div>
-                    <p>Integrating AI and machine learning for decision-making within automated workflows, enabling adaptive responses.</p>
+                    <div class="card-title">الأتمتة الذكية</div>
+                    <p>دمج الذكاء الاصطناعي والتعلم الآلي لاتخاذ القرارات ضمن سير العمل الآلي، مما يمكن من استجابات تكيفية.</p>
                 </div>
             </div>
             
-            <h3 class="animation-delay-4s">n8n Platform</h3>
-            <p class="animation-delay-4s"><strong>Overview:</strong> n8n is an open-source, node-based workflow automation tool that enables visual creation of complex automation scenarios with extensive integration capabilities.</p>
+            <h3 class="animation-delay-4s">منصة n8n</h3>
+            <p class="animation-delay-4s"><strong>نظرة عامة:</strong> n8n هي أداة أتمتة سير عمل مفتوحة المصدر تعتمد على العقد، تمكن من إنشاء مرئي لسيناريوهات أتمتة معقدة مع قدرات تكامل واسعة.</p>
             
             <div class="highlight scale-pulse">
-                <h3 style="margin-top: 0;" class="animation-delay-4s">Comparison with Other Platforms</h3>
+                <h3 style="margin-top: 0;" class="animation-delay-4s">مقارنة مع المنصات الأخرى</h3>
                 <table>
                     <tr>
-                        <th>Platform</th>
-                        <th>Type</th>
-                        <th>Key Feature</th>
-                        <th>Cost Model</th>
+                        <th>المنصة</th>
+                        <th>النوع</th>
+                        <th>الميزة الرئيسية</th>
+                        <th>نموذج التكلفة</th>
                     </tr>
                     <tr>
                         <td><strong>n8n</strong></td>
-                        <td>Open Source</td>
-                        <td>Self-hosted, unlimited workflows</td>
-                        <td>Free / Enterprise</td>
+                        <td>مفتوح المصدر</td>
+                        <td>استضافة ذاتية، سير عمل غير محدود</td>
+                        <td>مجاني / مؤسسي</td>
                     </tr>
                     <tr>
                         <td>Zapier</td>
                         <td>SaaS</td>
-                        <td>Ease of use, large app library</td>
-                        <td>Tiered subscription</td>
+                        <td>سهولة الاستخدام، مكتبة تطبيقات كبيرة</td>
+                        <td>اشتراك متدرج</td>
                     </tr>
                     <tr>
                         <td>Make (Integromat)</td>
                         <td>SaaS</td>
-                        <td>Visual scenarios, data transformation</td>
-                        <td>Tiered subscription</td>
+                        <td>سيناريوهات مرئية، تحويل البيانات</td>
+                        <td>اشتراك متدرج</td>
                     </tr>
                     <tr>
                         <td>Power Automate</td>
-                        <td>SaaS/On-prem</td>
-                        <td>Microsoft integration, RPA capabilities</td>
-                        <td>Subscription</td>
+                        <td>SaaS/محلي</td>
+                        <td>تكامل Microsoft، قدرات RPA</td>
+                        <td>اشتراك</td>
                     </tr>
                 </table>
             </div>
@@ -2234,177 +2234,177 @@
             <div class="card scale-in" style="margin-top: 20px;">
                 <div class="card-title">
                     <i class="fas fa-book-open"></i>
-                    Academic Foundation
+                    الأساس الأكاديمي
                 </div>
-                <p>This research builds on established theories in business process management, automation economics, and human-computer interaction, applying them to modern open-source automation platforms.</p>
+                <p>يبني هذا البحث على النظريات الراسخة في إدارة العمليات التجارية واقتصاديات الأتمتة والتفاعل بين الإنسان والحاسوب، وتطبيقها على منصات الأتمتة مفتوحة المصدر الحديثة.</p>
             </div>
         </div>
     </div>
     
-    <!-- Slide 5: Research Methodology -->
+    <!-- الشريحة 5: منهجية البحث -->
     <div class="container" id="slide5">
         <div class="slide-header">
             <div>
-                <h1 class="slide-title">Research Methodology</h1>
-                <p class="slide-subtitle">Applied Study with Mixed Methods</p>
+                <h1 class="slide-title">منهجية البحث</h1>
+                <p class="slide-subtitle">دراسة تطبيقية بأساليب مختلطة</p>
             </div>
-            <div class="slide-number">5</div>
+            <div class="slide-number">٥</div>
         </div>
         
         <div class="content">
             <div class="grid">
                 <div class="card scale-in">
-                    <div class="card-title">Research Type</div>
-                    <p>Applied study with mixed methods combining qualitative and quantitative approaches:</p>
+                    <div class="card-title">نوع البحث</div>
+                    <p>دراسة تطبيقية بأساليب مختلطة تجمع بين المناهج النوعية والكمية:</p>
                     <ul>
-                        <li>Descriptive analytical research</li>
-                        <li>Case study methodology</li>
-                        <li>Practical experimentation</li>
-                        <li>Action research elements</li>
+                        <li>بحث وصفي تحليلي</li>
+                        <li>منهج دراسة الحالة</li>
+                        <li>التجريب العملي</li>
+                        <li>عناصر البحث الإجرائي</li>
                     </ul>
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title">Research Population and Sample</div>
-                    <p>Target groups for research application:</p>
+                    <div class="card-title">مجتمع وعينة البحث</div>
+                    <p>الفئات المستهدفة لتطبيق البحث:</p>
                     <ul>
-                        <li>Small and medium enterprises (SMEs)</li>
-                        <li>Technical and administrative teams</li>
-                        <li>Individual productivity tool users</li>
-                        <li>Educational institutions</li>
+                        <li>المنشآت الصغيرة والمتوسطة</li>
+                        <li>الفرق التقنية والإدارية</li>
+                        <li>مستخدمو أدوات الإنتاجية الفردية</li>
+                        <li>المؤسسات التعليمية</li>
                     </ul>
                 </div>
             </div>
             
-            <h2 class="animation-delay-4s">Data Collection Tools</h2>
+            <h2 class="animation-delay-4s">أدوات جمع البيانات</h2>
             <div class="grid">
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-clipboard-list"></i> Surveys</div>
-                    <p>To measure satisfaction and productivity levels before and after application using validated scales.</p>
+                    <div class="card-title"><i class="fas fa-clipboard-list"></i> الاستبيانات</div>
+                    <p>لقياس مستويات الرضا والإنتاجية قبل وبعد التطبيق باستخدام مقاييس موثقة.</p>
                 </div>
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-comments"></i> Interviews</div>
-                    <p>With users and managers to gather qualitative feedback and insights on automation impact.</p>
+                    <div class="card-title"><i class="fas fa-comments"></i> المقابلات</div>
+                    <p>مع المستخدمين والمديرين لجمع ملاحظات نوعية ورؤى حول تأثير الأتمتة.</p>
                 </div>
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-chart-bar"></i> Technical Measurements</div>
-                    <p>Execution time, error rate, number of tasks automated, with precise tracking.</p>
+                    <div class="card-title"><i class="fas fa-chart-bar"></i> القياسات التقنية</div>
+                    <p>وقت التنفيذ، معدل الخطأ، عدد المهام المنجزة تلقائياً مع تتبع دقيق.</p>
                 </div>
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-file-alt"></i> Document Analysis</div>
-                    <p>System logs and dashboards to track performance and identify patterns.</p>
+                    <div class="card-title"><i class="fas fa-file-alt"></i> تحليل المستندات</div>
+                    <p>سجلات النظام ولوحات المعلومات لتتبع الأداء وتحديد الأنماط.</p>
                 </div>
             </div>
             
             <div class="highlight scale-pulse">
-                <h3 style="margin-top: 0;" class="animation-delay-4s">Research Validity and Reliability</h3>
-                <p class="animation-delay-4s">To ensure academic rigor, the research uses triangulation of data sources, pilot testing of instruments, and statistical validation of results using appropriate statistical software.</p>
+                <h3 style="margin-top: 0;" class="animation-delay-4s">صدق وثبات البحث</h3>
+                <p class="animation-delay-4s">لضمان الدقة الأكاديمية، يستخدم البحث تثليث مصادر البيانات والاختبار التجريبي للأدوات والتحقق الإحصائي للنتائج باستخدام برامج إحصائية مناسبة.</p>
             </div>
         </div>
     </div>
     
-    <!-- Slide 6: Implementation Steps -->
+    <!-- الشريحة 6: خطوات التنفيذ -->
     <div class="container" id="slide6">
         <div class="slide-header">
             <div>
-                <h1 class="slide-title">Implementation Steps</h1>
-                <p class="slide-subtitle">Five-Phase Research Methodology</p>
+                <h1 class="slide-title">خطوات التنفيذ</h1>
+                <p class="slide-subtitle">منهجية البحث بخمس مراحل</p>
             </div>
-            <div class="slide-number">6</div>
+            <div class="slide-number">٦</div>
         </div>
         
         <div class="content">
             <div class="timeline-bar">
-                <div class="timeline-phase" style="background: var(--gradient); width: 15%; left: 0;">
-                    <div class="phase-label" style="left: 5%;">Phase 1<br>Analysis</div>
+                <div class="timeline-phase" style="background: var(--gradient); width: 15%; right: 0;">
+                    <div class="phase-label" style="right: 5%;">المرحلة ١<br>التحليل</div>
                 </div>
-                <div class="timeline-phase" style="background: var(--gradient); width: 15%; left: 16%;">
-                    <div class="phase-label" style="left: 21%;">Phase 2<br>Design</div>
+                <div class="timeline-phase" style="background: var(--gradient); width: 15%; right: 16%;">
+                    <div class="phase-label" style="right: 21%;">المرحلة ٢<br>التصميم</div>
                 </div>
-                <div class="timeline-phase" style="background: var(--gradient); width: 30%; left: 32%;">
-                    <div class="phase-label" style="left: 42%;">Phase 3<br>Development</div>
+                <div class="timeline-phase" style="background: var(--gradient); width: 30%; right: 32%;">
+                    <div class="phase-label" style="right: 42%;">المرحلة ٣<br>التطوير</div>
                 </div>
-                <div class="timeline-phase" style="background: var(--gradient); width: 20%; left: 63%;">
-                    <div class="phase-label" style="left: 68%;">Phase 4<br>Evaluation</div>
+                <div class="timeline-phase" style="background: var(--gradient); width: 20%; right: 63%;">
+                    <div class="phase-label" style="right: 68%;">المرحلة ٤<br>التقييم</div>
                 </div>
-                <div class="timeline-phase" style="background: var(--gradient); width: 15%; left: 84%;">
-                    <div class="phase-label" style="left: 89%;">Phase 5<br>Documentation</div>
+                <div class="timeline-phase" style="background: var(--gradient); width: 15%; right: 84%;">
+                    <div class="phase-label" style="right: 89%;">المرحلة ٥<br>التوثيق</div>
                 </div>
             </div>
             
             <div class="grid">
                 <div class="card scale-in">
-                    <div class="card-title">Phase 1: Analysis & Planning</div>
+                    <div class="card-title">المرحلة ١: التحليل والتخطيط</div>
                     <ul>
-                        <li>Identify daily tasks suitable for automation</li>
-                        <li>Analyze user needs and requirements</li>
-                        <li>Map current workflows and processes</li>
-                        <li>Define system requirements and constraints</li>
+                        <li>تحديد المهام اليومية المناسبة للأتمتة</li>
+                        <li>تحليل احتياجات المستخدمين ومتطلباتهم</li>
+                        <li>رسم خرائط سير العمل والعمليات الحالية</li>
+                        <li>تحديد متطلبات النظام والقيود</li>
                     </ul>
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title">Phase 2: Design & Setup</div>
+                    <div class="card-title">المرحلة ٢: التصميم والإعداد</div>
                     <ul>
-                        <li>Install and configure n8n environment</li>
-                        <li>Design basic workflow and automation logic</li>
-                        <li>Configure required integrations and connections</li>
-                        <li>Create database structure and variables</li>
+                        <li>تثبيت وتهيئة بيئة n8n</li>
+                        <li>تصميم سير العمل الأساسي ومنطق الأتمتة</li>
+                        <li>تكوين التكاملات والاتصالات المطلوبة</li>
+                        <li>إنشاء هيكل قاعدة البيانات والمتغيرات</li>
                     </ul>
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title">Phase 3: Development & Execution</div>
+                    <div class="card-title">المرحلة ٣: التطوير والتنفيذ</div>
                     <ul>
-                        <li>Build practical automation scenarios</li>
-                        <li>Test individual components and modules</li>
-                        <li>Handle errors and exceptions</li>
-                        <li>Optimize performance and reliability</li>
+                        <li>بناء سيناريوهات الأتمتة العملية</li>
+                        <li>اختبار الوحدات والمكونات المختلفة</li>
+                        <li>معالجة الأخطاء والاستثناءات</li>
+                        <li>تحسين الأداء والموثوقية</li>
                     </ul>
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title">Phase 4: Testing & Evaluation</div>
+                    <div class="card-title">المرحلة ٤: الاختبار والتقييم</div>
                     <ul>
-                        <li>Conduct limited pilot implementation</li>
-                        <li>Collect data and user feedback</li>
-                        <li>Analyze results against KPIs</li>
-                        <li>Apply necessary adjustments and improvements</li>
+                        <li>تنفيذ تجريبي محدود</li>
+                        <li>جمع البيانات وملاحظات المستخدمين</li>
+                        <li>تحليل النتائج مقابل مؤشرات الأداء</li>
+                        <li>تطبيق التعديلات والتحسينات اللازمة</li>
                     </ul>
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title">Phase 5: Documentation & Recommendations</div>
+                    <div class="card-title">المرحلة ٥: التوثيق والتوصيات</div>
                     <ul>
-                        <li>Write final research reports</li>
-                        <li>Prepare comprehensive user guide</li>
-                        <li>Document best practices and lessons learned</li>
-                        <li>Provide implementation recommendations</li>
+                        <li>كتابة التقارير البحثية النهائية</li>
+                        <li>إعداد دليل مستخدم شامل</li>
+                        <li>توثيق أفضل الممارسات والدروس المستفادة</li>
+                        <li>تقديم توصيات التنفيذ</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Slide 7: Practical Automation Scenarios -->
+    <!-- الشريحة 7: سيناريوهات الأتمتة العملية -->
     <div class="container" id="slide7">
         <div class="slide-header">
             <div>
-                <h1 class="slide-title">Practical Automation Scenarios</h1>
-                <p class="slide-subtitle">Real-World Application Examples</p>
+                <h1 class="slide-title">سيناريوهات الأتمتة العملية</h1>
+                <p class="slide-subtitle">أمثلة تطبيقية من العالم الحقيقي</p>
             </div>
-            <div class="slide-number">7</div>
+            <div class="slide-number">٧</div>
         </div>
         
         <div class="content">
             <div class="grid">
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-envelope"></i> Email Management Automation</div>
+                    <div class="card-title"><i class="fas fa-envelope"></i> أتمتة إدارة البريد الإلكتروني</div>
                     <ul>
-                        <li>Automatically classify and filter emails</li>
-                        <li>Auto-reply to specific inquiries</li>
-                        <li>Archive attachments to cloud storage</li>
-                        <li>Send alerts for important messages</li>
+                        <li>تصنيف وتصفية البريد الإلكتروني تلقائياً</li>
+                        <li>الرد التلقائي على استفسارات محددة</li>
+                        <li>أرشفة المرفقات إلى التخزين السحابي</li>
+                        <li>إرسال تنبيهات للرسائل الهامة</li>
                     </ul>
                     <div style="margin-top: 8px;">
                         <span class="tag">Gmail</span>
@@ -2414,12 +2414,12 @@
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-project-diagram"></i> Project Management Automation</div>
+                    <div class="card-title"><i class="fas fa-project-diagram"></i> أتمتة إدارة المشاريع</div>
                     <ul>
-                        <li>Create new tasks from forms or emails</li>
-                        <li>Automatically update task statuses</li>
-                        <li>Send periodic progress reports</li>
-                        <li>Notify team about deadlines</li>
+                        <li>إنشاء مهام جديدة من النماذج أو البريد الإلكتروني</li>
+                        <li>تحديث حالات المهام تلقائياً</li>
+                        <li>إرسال تقارير تقدم دورية</li>
+                        <li>إخطار الفريق بالمواعيد النهائية</li>
                     </ul>
                     <div style="margin-top: 8px;">
                         <span class="tag">Trello</span>
@@ -2429,12 +2429,12 @@
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-bullhorn"></i> Content & Marketing Automation</div>
+                    <div class="card-title"><i class="fas fa-bullhorn"></i> أتمتة المحتوى والتسويق</div>
                     <ul>
-                        <li>Schedule and publish content across platforms</li>
-                        <li>Collect and analyze social media data</li>
-                        <li>Send personalized marketing messages</li>
-                        <li>Generate automatic performance reports</li>
+                        <li>جدولة ونشر المحتوى عبر المنصات</li>
+                        <li>جمع وتحليل بيانات وسائل التواصل الاجتماعي</li>
+                        <li>إرسال رسائل تسويقية مخصصة</li>
+                        <li>إنشاء تقارير أداء تلقائية</li>
                     </ul>
                     <div style="margin-top: 8px;">
                         <span class="tag">Twitter</span>
@@ -2444,12 +2444,12 @@
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-chart-pie"></i> Financial Process Automation</div>
+                    <div class="card-title"><i class="fas fa-chart-pie"></i> أتمتة العمليات المالية</div>
                     <ul>
-                        <li>Track expenses and invoices</li>
-                        <li>Generate periodic financial reports</li>
-                        <li>Send payment due reminders</li>
-                        <li>Sync data with accounting systems</li>
+                        <li>تتبع النفقات والفواتير</li>
+                        <li>إنشاء تقارير مالية دورية</li>
+                        <li>إرسال تذكيرات استحقاق الدفع</li>
+                        <li>مزامنة البيانات مع أنظمة المحاسبة</li>
                     </ul>
                     <div style="margin-top: 8px;">
                         <span class="tag">QuickBooks</span>
@@ -2459,433 +2459,433 @@
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-users"></i> HR Process Automation</div>
+                    <div class="card-title"><i class="fas fa-users"></i> أتمتة عمليات الموارد البشرية</div>
                     <ul>
-                        <li>Process leave requests</li>
-                        <li>Send employee satisfaction surveys</li>
-                        <li>Organize recruitment workflows</li>
-                        <li>Manage performance evaluations</li>
+                        <li>معالجة طلبات الإجازات</li>
+                        <li>إرسال استبيانات رضا الموظفين</li>
+                        <li>تنظيم سير عمل التوظيف</li>
+                        <li>إدارة تقييمات الأداء</li>
                     </ul>
                     <div style="margin-top: 8px;">
-                        <span class="tag">Forms</span>
+                        <span class="tag">النماذج</span>
                         <span class="tag">Slack</span>
-                        <span class="tag">Calendar</span>
+                        <span class="tag">التقويم</span>
                     </div>
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-graduation-cap"></i> Educational Process Automation</div>
+                    <div class="card-title"><i class="fas fa-graduation-cap"></i> أتمتة العمليات التعليمية</div>
                     <ul>
-                        <li>Automatically grade tests</li>
-                        <li>Distribute educational materials</li>
-                        <li>Track student attendance</li>
-                        <li>Generate graduation certificates</li>
+                        <li>تصحيح الاختبارات تلقائياً</li>
+                        <li>توزيع المواد التعليمية</li>
+                        <li>تتبع حضور الطلاب</li>
+                        <li>إنشاء شهادات التخرج</li>
                     </ul>
                     <div style="margin-top: 8px;">
                         <span class="tag">Moodle</span>
                         <span class="tag">Google Classroom</span>
-                        <span class="tag">PDF Generation</span>
+                        <span class="tag">إنشاء PDF</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Slide 8: Evaluation and Measurement -->
+    <!-- الشريحة 8: التقييم والقياس -->
     <div class="container" id="slide8">
         <div class="slide-header">
             <div>
-                <h1 class="slide-title">Evaluation and Measurement</h1>
-                <p class="slide-subtitle">Quantitative and Qualitative Indicators</p>
+                <h1 class="slide-title">التقييم والقياس</h1>
+                <p class="slide-subtitle">المؤشرات الكمية والنوعية</p>
             </div>
-            <div class="slide-number">8</div>
+            <div class="slide-number">٨</div>
         </div>
         
         <div class="content">
-            <h2 class="animation-delay-4s">Quantitative KPIs</h2>
+            <h2 class="animation-delay-4s">مؤشرات الأداء الكمية (KPIs)</h2>
             <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 15px 0;">
-                <div class="kpi"><i class="fas fa-clock"></i> Task completion time reduction</div>
-                <div class="kpi"><i class="fas fa-exclamation-triangle"></i> Error rate before/after</div>
-                <div class="kpi"><i class="fas fa-tasks"></i> Tasks executed per hour</div>
-                <div class="kpi"><i class="fas fa-money-bill-wave"></i> Operational cost savings</div>
-                <div class="kpi"><i class="fas fa-tachometer-alt"></i> System response time</div>
-                <div class="kpi"><i class="fas fa-user-check"></i> User satisfaction</div>
+                <div class="kpi"><i class="fas fa-clock"></i> تقليل وقت إنجاز المهام</div>
+                <div class="kpi"><i class="fas fa-exclamation-triangle"></i> معدل الخطأ قبل/بعد</div>
+                <div class="kpi"><i class="fas fa-tasks"></i> المهام المنفذة في الساعة</div>
+                <div class="kpi"><i class="fas fa-money-bill-wave"></i> توفير التكاليف التشغيلية</div>
+                <div class="kpi"><i class="fas fa-tachometer-alt"></i> زمن استجابة النظام</div>
+                <div class="kpi"><i class="fas fa-user-check"></i> رضا المستخدمين</div>
             </div>
             
             <div class="stats">
                 <div class="stat scale-in">
-                    <div class="stat-value">65%</div>
-                    <div class="stat-label">Time Savings</div>
+                    <div class="stat-value">٦٥٪</div>
+                    <div class="stat-label">توفير الوقت</div>
                 </div>
                 <div class="stat scale-in">
-                    <div class="stat-value">82%</div>
-                    <div class="stat-label">Error Reduction</div>
+                    <div class="stat-value">٨٢٪</div>
+                    <div class="stat-label">تقليل الأخطاء</div>
                 </div>
                 <div class="stat scale-in">
-                    <div class="stat-value">45%</div>
-                    <div class="stat-label">Cost Reduction</div>
+                    <div class="stat-value">٤٥٪</div>
+                    <div class="stat-label">خفض التكاليف</div>
                 </div>
                 <div class="stat scale-in">
-                    <div class="stat-value">92%</div>
-                    <div class="stat-label">User Satisfaction</div>
+                    <div class="stat-value">٩٢٪</div>
+                    <div class="stat-label">رضا المستخدمين</div>
                 </div>
             </div>
             
-            <h2 class="animation-delay-4s">Qualitative Indicators</h2>
+            <h2 class="animation-delay-4s">المؤشرات النوعية</h2>
             <div class="grid">
                 <div class="card scale-in">
-                    <div class="card-title">User Satisfaction</div>
-                    <p>Measuring ease of use, learning curve, and overall satisfaction with the automated system.</p>
+                    <div class="card-title">رضا المستخدمين</div>
+                    <p>قياس سهولة الاستخدام ومنحنى التعلم والرضا العام عن النظام الآلي.</p>
                 </div>
                 <div class="card scale-in">
-                    <div class="card-title">Flexibility & Scalability</div>
-                    <p>Assessing how easily the system adapts to new requirements and scales with growth.</p>
+                    <div class="card-title">المرونة وقابلية التوسع</div>
+                    <p>تقييم مدى سهولة تكيف النظام مع المتطلبات الجديدة وتوسعه مع النمو.</p>
                 </div>
                 <div class="card scale-in">
-                    <div class="card-title">Reliability & Security</div>
-                    <p>Evaluating data protection, system stability, and regulatory compliance.</p>
+                    <div class="card-title">الموثوقية والأمان</div>
+                    <p>تقييم حماية البيانات واستقرار النظام والامتثال التنظيمي.</p>
                 </div>
             </div>
             
-            <h2 class="animation-delay-4s">Measurement Tools</h2>
+            <h2 class="animation-delay-4s">أدوات القياس</h2>
             <table>
                 <tr>
-                    <th>Tool</th>
-                    <th>Purpose</th>
-                    <th>Metrics</th>
+                    <th>الأداة</th>
+                    <th>الغرض</th>
+                    <th>المقاييس</th>
                 </tr>
                 <tr>
                     <td><strong>Google Analytics</strong></td>
-                    <td>Track user interactions</td>
-                    <td>Usage patterns, session duration</td>
+                    <td>تتبع تفاعلات المستخدمين</td>
+                    <td>أنماط الاستخدام، مدة الجلسة</td>
                 </tr>
                 <tr>
-                    <td><strong>n8n Dashboards</strong></td>
-                    <td>System monitoring</td>
-                    <td>Workflow executions, success rates</td>
+                    <td><strong>لوحات معلومات n8n</strong></td>
+                    <td>مراقبة النظام</td>
+                    <td>تنفيذات سير العمل، معدلات النجاح</td>
                 </tr>
                 <tr>
-                    <td><strong>SUS Questionnaire</strong></td>
-                    <td>Usability evaluation</td>
-                    <td>System Usability Scale score</td>
+                    <td><strong>استبيان SUS</strong></td>
+                    <td>تقييم قابلية الاستخدام</td>
+                    <td>درجة مقياس قابلية استخدام النظام</td>
                 </tr>
                 <tr>
-                    <td><strong>Log Analysis</strong></td>
-                    <td>Performance tracking</td>
-                    <td>Error frequency, execution time</td>
+                    <td><strong>تحليل السجلات</strong></td>
+                    <td>تتبع الأداء</td>
+                    <td>تكرار الأخطاء، وقت التنفيذ</td>
                 </tr>
             </table>
         </div>
     </div>
     
-    <!-- Slide 9: Expected Challenges and Solutions -->
+    <!-- الشريحة 9: التحديات المتوقعة والحلول -->
     <div class="container" id="slide9">
         <div class="slide-header">
             <div>
-                <h1 class="slide-title">Expected Challenges and Solutions</h1>
-                <p class="slide-subtitle">Anticipating Implementation Hurdles</p>
+                <h1 class="slide-title">التحديات المتوقعة والحلول</h1>
+                <p class="slide-subtitle">توقع عقبات التنفيذ</p>
             </div>
-            <div class="slide-number">9</div>
+            <div class="slide-number">٩</div>
         </div>
         
         <div class="content">
-            <h2 class="animation-delay-4s">Technical Challenges</h2>
+            <h2 class="animation-delay-4s">التحديات التقنية</h2>
             
             <div class="challenge-solution">
                 <div class="challenge">
-                    <h3><i class="fas fa-exclamation-circle"></i> Challenge</h3>
-                    <p><strong>Complex integration with legacy systems</strong><br>
-                    Older systems may lack modern APIs or documentation.</p>
+                    <h3><i class="fas fa-exclamation-circle"></i> التحدي</h3>
+                    <p><strong>التكامل المعقد مع الأنظمة القديمة</strong><br>
+                    قد تفتقر الأنظمة القديمة إلى واجهات برمجة تطبيقات حديثة أو توثيق.</p>
                 </div>
                 <div class="solution">
-                    <h3><i class="fas fa-lightbulb"></i> Solution</h3>
-                    <p><strong>Use middleware or custom APIs</strong><br>
-                    Develop connectors or use integration platforms to bridge compatibility gaps.</p>
+                    <h3><i class="fas fa-lightbulb"></i> الحل</h3>
+                    <p><strong>استخدام حلول وسيطة أو واجهات برمجة تطبيقات مخصصة</strong><br>
+                    تطوير موصلات أو استخدام منصات وسيطة لسد فجوات التوافق.</p>
                 </div>
             </div>
             
             <div class="challenge-solution">
                 <div class="challenge">
-                    <h3><i class="fas fa-exclamation-circle"></i> Challenge</h3>
-                    <p><strong>API rate limits and quotas</strong><br>
-                    External services may restrict API call frequency.</p>
+                    <h3><i class="fas fa-exclamation-circle"></i> التحدي</h3>
+                    <p><strong>حدود معدل واجهة برمجة التطبيقات والحصص</strong><br>
+                    قد تقيد الخدمات الخارجية تكرار استدعاءات واجهة برمجة التطبيقات.</p>
                 </div>
                 <div class="solution">
-                    <h3><i class="fas fa-lightbulb"></i> Solution</h3>
-                    <p><strong>Implement smart throttling and retry mechanisms</strong><br>
-                    Add intelligent queuing and exponential backoff strategies.</p>
+                    <h3><i class="fas fa-lightbulb"></i> الحل</h3>
+                    <p><strong>تنفيذ آليات تأخير وإعادة محاولة ذكية</strong><br>
+                    إضافة قائمة انتظار ذكية واستراتيجيات التراجع الأسي.</p>
                 </div>
             </div>
             
-            <h2 style="margin-top: 25px;" class="animation-delay-4s">Organizational Challenges</h2>
+            <h2 style="margin-top: 25px;" class="animation-delay-4s">التحديات التنظيمية</h2>
             
             <div class="challenge-solution">
                 <div class="challenge">
-                    <h3><i class="fas fa-exclamation-circle"></i> Challenge</h3>
-                    <p><strong>User resistance to change</strong><br>
-                    Employees may hesitate to adopt new automated processes.</p>
+                    <h3><i class="fas fa-exclamation-circle"></i> التحدي</h3>
+                    <p><strong>مقاومة المستخدمين للتغيير</strong><br>
+                    قد يتردد الموظفون في تبني العمليات الآلية الجديدة.</p>
                 </div>
                 <div class="solution">
-                    <h3><i class="fas fa-lightbulb"></i> Solution</h3>
-                    <p><strong>Comprehensive training and awareness programs</strong><br>
-                    Demonstrate early benefits and involve users in the design process.</p>
+                    <h3><i class="fas fa-lightbulb"></i> الحل</h3>
+                    <p><strong>برامج تدريب مكثفة وزيادة الوعي</strong><br>
+                    إظهار الفوائد مبكراً وإشراك المستخدمين في عملية التصميم.</p>
                 </div>
             </div>
             
-            <h2 style="margin-top: 25px;" class="animation-delay-4s">Security Challenges</h2>
+            <h2 style="margin-top: 25px;" class="animation-delay-4s">التحديات الأمنية</h2>
             
             <div class="challenge-solution">
                 <div class="challenge">
-                    <h3><i class="fas fa-exclamation-circle"></i> Challenge</h3>
-                    <p><strong>Protecting credentials and sensitive data</strong><br>
-                    Automated workflows often require access to sensitive systems.</p>
+                    <h3><i class="fas fa-exclamation-circle"></i> التحدي</h3>
+                    <p><strong>حماية بيانات الاعتماد والبيانات الحساسة</strong><br>
+                    غالباً ما تتطلب سير العمل الآلي الوصول إلى أنظمة حساسة.</p>
                 </div>
                 <div class="solution">
-                    <h3><i class="fas fa-lightbulb"></i> Solution</h3>
-                    <p><strong>Use encryption and secure secret management</strong><br>
-                    Implement role-based access control and regularly rotate credentials.</p>
+                    <h3><i class="fas fa-lightbulb"></i> الحل</h3>
+                    <p><strong>استخدام التشفير وإدارة الأسرار الآمنة</strong><br>
+                    تطبيق التحكم في الوصول القائم على الأدوار وتدوير بيانات الاعتماد بانتظام.</p>
                 </div>
             </div>
             
             <div class="stats" style="margin-top: 25px;">
                 <div class="stat scale-in">
-                    <div class="stat-value">70%</div>
-                    <div class="stat-label">Technical Challenges</div>
+                    <div class="stat-value">٧٠٪</div>
+                    <div class="stat-label">تحديات تقنية</div>
                 </div>
                 <div class="stat scale-in">
-                    <div class="stat-value">20%</div>
-                    <div class="stat-label">Organizational Challenges</div>
+                    <div class="stat-value">٢٠٪</div>
+                    <div class="stat-label">تحديات تنظيمية</div>
                 </div>
                 <div class="stat scale-in">
-                    <div class="stat-value">10%</div>
-                    <div class="stat-label">Security Challenges</div>
+                    <div class="stat-value">١٠٪</div>
+                    <div class="stat-label">تحديات أمنية</div>
                 </div>
                 <div class="stat scale-in">
-                    <div class="stat-value">95%</div>
-                    <div class="stat-label">Solvable</div>
+                    <div class="stat-value">٩٥٪</div>
+                    <div class="stat-label">قابلة للحل</div>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Slide 10: Timeline and Budget -->
+    <!-- الشريحة 10: الجدول الزمني والميزانية -->
     <div class="container" id="slide10">
         <div class="slide-header">
             <div>
-                <h1 class="slide-title">Timeline and Budget</h1>
-                <p class="slide-subtitle">Project Planning and Resource Allocation</p>
+                <h1 class="slide-title">الجدول الزمني والميزانية</h1>
+                <p class="slide-subtitle">تخطيط المشروع وتخصيص الموارد</p>
             </div>
-            <div class="slide-number">10</div>
+            <div class="slide-number">١٠</div>
         </div>
         
         <div class="content">
-            <h2 class="animation-delay-4s">Estimated Timeline: 5 months (19-20 weeks)</h2>
+            <h2 class="animation-delay-4s">الجدول الزمني المتوقع: ٥ أشهر (١٩-٢٠ أسبوعاً)</h2>
             <table>
                 <tr>
-                    <th>Phase</th>
-                    <th>Duration</th>
-                    <th>Key Activities</th>
+                    <th>المرحلة</th>
+                    <th>المدة</th>
+                    <th>الأنشطة الرئيسية</th>
                 </tr>
                 <tr>
-                    <td><strong>Setup & Literature Review</strong></td>
-                    <td>2-3 weeks</td>
-                    <td>Gather references, analyze studies</td>
+                    <td><strong>الإعداد ومراجعة الأدبيات</strong></td>
+                    <td>٢-٣ أسابيع</td>
+                    <td>جمع المراجع، تحليل الدراسات</td>
                 </tr>
                 <tr>
-                    <td><strong>Analysis & Planning</strong></td>
-                    <td>4 weeks</td>
-                    <td>Requirements gathering, workflow mapping</td>
+                    <td><strong>التحليل والتخطيط</strong></td>
+                    <td>٤ أسابيع</td>
+                    <td>تحديد المتطلبات، رسم خرائط سير العمل</td>
                 </tr>
                 <tr>
-                    <td><strong>Design & Setup</strong></td>
-                    <td>3 weeks</td>
-                    <td>Environment setup, initial design</td>
+                    <td><strong>التصميم والإعداد</strong></td>
+                    <td>٣ أسابيع</td>
+                    <td>إعداد البيئة، التصميم الأولي</td>
                 </tr>
                 <tr>
-                    <td><strong>Development & Execution</strong></td>
-                    <td>6 weeks</td>
-                    <td>Build workflows, testing</td>
+                    <td><strong>التطوير والتنفيذ</strong></td>
+                    <td>٦ أسابيع</td>
+                    <td>بناء سير العمل، الاختبار</td>
                 </tr>
                 <tr>
-                    <td><strong>Testing & Evaluation</strong></td>
-                    <td>4 weeks</td>
-                    <td>Pilot testing, data collection</td>
+                    <td><strong>الاختبار والتقييم</strong></td>
+                    <td>٤ أسابيع</td>
+                    <td>اختبار تجريبي، جمع البيانات</td>
                 </tr>
                 <tr>
-                    <td><strong>Analysis & Documentation</strong></td>
-                    <td>2 weeks</td>
-                    <td>Report preparation, recommendations</td>
+                    <td><strong>التحليل والتوثيق</strong></td>
+                    <td>٢ أسبوع</td>
+                    <td>إعداد التقرير، التوصيات</td>
                 </tr>
             </table>
             
-            <h2 style="margin-top: 25px;" class="animation-delay-4s">Estimated Budget</h2>
+            <h2 style="margin-top: 25px;" class="animation-delay-4s">الميزانية المتوقعة</h2>
             <div class="grid">
                 <div class="card scale-in">
-                    <div class="card-title">Technical Costs</div>
+                    <div class="card-title">التكاليف التقنية</div>
                     <ul>
-                        <li>n8n hosting server: $20-50/month</li>
-                        <li>API subscriptions: $50-200/month</li>
-                        <li>Development and testing tools: $100 one-time</li>
-                        <li>Domain and SSL certificate: $30/year</li>
+                        <li>خادم استضافة n8n: ٢٠-٥٠ دولار/شهرياً</li>
+                        <li>اشتراكات واجهة برمجة التطبيقات: ٥٠-٢٠٠ دولار/شهرياً</li>
+                        <li>أدوات التطوير والاختبار: ١٠٠ دولار لمرة واحدة</li>
+                        <li>النطاق وشهادة SSL: ٣٠ دولار/سنوياً</li>
                     </ul>
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title">Human Resource Costs</div>
+                    <div class="card-title">تكاليف الموارد البشرية</div>
                     <ul>
-                        <li>Development and research team</li>
-                        <li>User training sessions</li>
-                        <li>Technical support staff</li>
+                        <li>فريق التطوير والبحث</li>
+                        <li>جلسات تدريب المستخدمين</li>
+                        <li>موظفو الدعم الفني</li>
                     </ul>
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title">Other Costs</div>
+                    <div class="card-title">تكاليف أخرى</div>
                     <ul>
-                        <li>Monitoring and analytics tools</li>
-                        <li>Backup and security solutions</li>
-                        <li>Documentation materials</li>
+                        <li>أدوات المراقبة والتحليلات</li>
+                        <li>حلول النسخ الاحتياطي والأمان</li>
+                        <li>مواد التوثيق</li>
                     </ul>
                 </div>
             </div>
             
             <div class="stats" style="margin-top: 20px;">
                 <div class="stat scale-in">
-                    <div class="stat-value">$500</div>
-                    <div class="stat-label">Technical Costs</div>
+                    <div class="stat-value">٥٠٠$</div>
+                    <div class="stat-label">التكاليف التقنية</div>
                 </div>
                 <div class="stat scale-in">
-                    <div class="stat-value">$1000</div>
-                    <div class="stat-label">Human Resource Costs</div>
+                    <div class="stat-value">١٠٠٠$</div>
+                    <div class="stat-label">تكاليف الموارد البشرية</div>
                 </div>
                 <div class="stat scale-in">
-                    <div class="stat-value">$300</div>
-                    <div class="stat-label">Other Costs</div>
+                    <div class="stat-value">٣٠٠$</div>
+                    <div class="stat-label">تكاليف أخرى</div>
                 </div>
                 <div class="stat scale-in">
-                    <div class="stat-value">$1800</div>
-                    <div class="stat-label">Total</div>
+                    <div class="stat-value">١٨٠٠$</div>
+                    <div class="stat-label">الإجمالي</div>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Slide 11: Expected Results -->
+    <!-- الشريحة 11: النتائج المتوقعة -->
     <div class="container" id="slide11">
         <div class="slide-header">
             <div>
-                <h1 class="slide-title">Expected Results</h1>
-                <p class="slide-subtitle">Tangible Outputs and Contributions</p>
+                <h1 class="slide-title">النتائج المتوقعة</h1>
+                <p class="slide-subtitle">المخرجات الملموسة والمساهمات</p>
             </div>
-            <div class="slide-number">11</div>
+            <div class="slide-number">١١</div>
         </div>
         
         <div class="content">
             <div class="grid">
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-code"></i> Technical Outcomes</div>
+                    <div class="card-title"><i class="fas fa-code"></i> النتائج التقنية</div>
                     <ul>
-                        <li>Functional automation system covering target tasks</li>
-                        <li>Reusable library of workflows</li>
-                        <li>Comprehensive technical documentation</li>
-                        <li>Deployment guides and configuration scripts</li>
+                        <li>نظام أتمتة وظيفي يغطي المهام المستهدفة</li>
+                        <li>مكتبة قابلة لإعادة الاستخدام من سير العمل</li>
+                        <li>توثيق تقني شامل</li>
+                        <li>أدلة نشر ونصوص تهيئة</li>
                     </ul>
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-chart-line"></i> Practical Outcomes</div>
+                    <div class="card-title"><i class="fas fa-chart-line"></i> النتائج العملية</div>
                     <ul>
-                        <li>Productivity improvement of 30-50%</li>
-                        <li>Human error reduction of 60-80%</li>
-                        <li>Save 15-25 working hours weekly</li>
-                        <li>Increased process consistency and reliability</li>
+                        <li>تحسين الإنتاجية بنسبة ٣٠-٥٠٪</li>
+                        <li>تقليل الأخطاء البشرية بنسبة ٦٠-٨٠٪</li>
+                        <li>توفير ١٥-٢٥ ساعة عمل أسبوعياً</li>
+                        <li>زيادة اتساق العمليات وموثوقيتها</li>
                     </ul>
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title"><i class="fas fa-graduation-cap"></i> Scientific Contribution</div>
+                    <div class="card-title"><i class="fas fa-graduation-cap"></i> المساهمة العلمية</div>
                     <ul>
-                        <li>Reference framework for task automation using n8n</li>
-                        <li>Practical case study with empirical data</li>
-                        <li>Recommendations for researchers and practitioners</li>
-                        <li>Methodology for evaluating automation impact</li>
+                        <li>إطار مرجعي لأتمتة المهام باستخدام n8n</li>
+                        <li>دراسة حالة عملية مع بيانات تجريبية</li>
+                        <li>توصيات للباحثين والممارسين</li>
+                        <li>منهجية لتقييم تأثير الأتمتة</li>
                     </ul>
                 </div>
             </div>
             
             <div class="stats">
                 <div class="stat scale-in">
-                    <div class="stat-value">45%</div>
-                    <div class="stat-label">Productivity Improvement</div>
+                    <div class="stat-value">٤٥٪</div>
+                    <div class="stat-label">تحسين الإنتاجية</div>
                 </div>
                 <div class="stat scale-in">
-                    <div class="stat-value">75%</div>
-                    <div class="stat-label">Error Reduction</div>
+                    <div class="stat-value">٧٥٪</div>
+                    <div class="stat-label">تقليل الأخطاء</div>
                 </div>
                 <div class="stat scale-in">
-                    <div class="stat-value">20</div>
-                    <div class="stat-label">Hours Saved/Week</div>
+                    <div class="stat-value">٢٠</div>
+                    <div class="stat-label">ساعات موفرة/أسبوع</div>
                 </div>
                 <div class="stat scale-in">
-                    <div class="stat-value">90%</div>
-                    <div class="stat-label">User Satisfaction</div>
+                    <div class="stat-value">٩٠٪</div>
+                    <div class="stat-label">رضا المستخدمين</div>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Slide 12: Recommendations and Future Work -->
+    <!-- الشريحة 12: التوصيات والعمل المستقبلي -->
     <div class="container" id="slide12">
         <div class="slide-header">
             <div>
-                <h1 class="slide-title">Recommendations and Future Work</h1>
-                <p class="slide-subtitle">Implementation Guidelines and Research Directions</p>
+                <h1 class="slide-title">التوصيات والعمل المستقبلي</h1>
+                <p class="slide-subtitle">إرشادات التنفيذ واتجاهات البحث</p>
             </div>
-            <div class="slide-number">12</div>
+            <div class="slide-number">١٢</div>
         </div>
         
         <div class="content">
-            <h2 class="animation-delay-4s">Implementation Recommendations</h2>
+            <h2 class="animation-delay-4s">توصيات التنفيذ</h2>
             <div class="grid">
                 <div class="card scale-in">
-                    <div class="card-title">Start Simple, Then Scale</div>
-                    <p>Begin with simple automation tasks before tackling complex workflows to build confidence and demonstrate quick wins.</p>
+                    <div class="card-title">البدء بسيطاً ثم التوسع</div>
+                    <p>البدء بمهام أتمتة بسيطة قبل معالجة سير العمل المعقد لبناء الثقة وإظهار نتائج سريعة.</p>
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title">Involve Users Early</div>
-                    <p>Involve end-users in the design phases to ensure the system meets actual needs and reduces resistance to change.</p>
+                    <div class="card-title">إشراك المستخدمين مبكراً</div>
+                    <p>إشراك المستخدمين النهائيين في مراحل التصميم لضمان تلبية النظام للاحتياجات الفعلية وتقليل مقاومة التغيير.</p>
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title">Build Robust Backup Systems</div>
-                    <p>Implement regular backup systems for workflows and data to prevent loss and ensure business continuity.</p>
+                    <div class="card-title">بناء نظام نسخ احتياطي قوي</div>
+                    <p>تنفيذ أنظمة نسخ احتياطي منتظمة لسير العمل والبيانات لمنع الفقدان وضمان استمرارية الأعمال.</p>
                 </div>
                 
                 <div class="card scale-in">
-                    <div class="card-title">Regular Maintenance</div>
-                    <p>Schedule periodic reviews and updates to keep the automation system aligned with evolving business needs.</p>
+                    <div class="card-title">الصيانة الدورية</div>
+                    <p>جدولة مراجعات وتحديثات دورية للحفاظ على توافق نظام الأتمتة مع احتياجات العمل المتطورة.</p>
                 </div>
             </div>
             
-            <h2 style="margin-top: 25px;" class="animation-delay-4s">Future Research Areas</h2>
+            <h2 style="margin-top: 25px;" class="animation-delay-4s">مجالات البحث المستقبلية</h2>
             <ul>
-                <li><strong>AI Integration:</strong> Incorporate machine learning for intelligent decision-making within workflows</li>
-                <li><strong>Complex Automation:</strong> Automate multi-step decision processes with conditional logic</li>
-                <li><strong>Sectoral Templates:</strong> Develop ready-to-use automation templates for healthcare, education, retail, and more</li>
-                <li><strong>Long-term Impact Studies:</strong> Research organizational transformation through sustained automation</li>
+                <li><strong>دمج الذكاء الاصطناعي:</strong> دمج التعلم الآلي لاتخاذ القرارات الذكية ضمن سير العمل</li>
+                <li><strong>الأتمتة المعقدة:</strong> أتمتة عمليات اتخاذ القرار متعددة الخطوات بمنطق شرطي</li>
+                <li><strong>قوالب قطاعية:</strong> تطوير قوالب أتمتة جاهزة للرعاية الصحية والتعليم والتجزئة وغيرها</li>
+                <li><strong>دراسات التأثير طويل المدى:</strong> بحث التحول التنظيمي من خلال الأتمتة المستدامة</li>
             </ul>
         </div>
     </div>
     
-    <!-- Slide 13: Questions and Discussion -->
+    <!-- الشريحة 13: الأسئلة والمناقشة -->
     <div class="container" id="slide13">
         <div class="slide-header">
             <div>
-                <h1 class="slide-title">Questions and Discussion</h1>
-                <p class="slide-subtitle">Thank you for your attention</p>
+                <h1 class="slide-title">الأسئلة والمناقشة</h1>
+                <p class="slide-subtitle">شكراً لحسن إصغائكم</p>
             </div>
-            <div class="slide-number">13</div>
+            <div class="slide-number">١٣</div>
         </div>
         
         <div class="content">
@@ -2893,52 +2893,52 @@
                 <div style="font-size: 3.5rem; color: var(--secondary); margin-bottom: 15px;" class="scale-pulse">
                     <i class="fas fa-comments"></i>
                 </div>
-                <h2>Open Floor for Questions</h2>
+                <h2>مجال مفتوح للأسئلة</h2>
                 <p style="font-size: 1.1rem; margin: 20px 0; color: var(--dark);">
-                    Let's discuss how n8n automation can transform your workflows
+                    دعونا نناقش كيف يمكن لأتمتة n8n تحويل سير عملكم
                 </p>
                 
-                <div style="max-width: 500px; margin: 25px auto; background: white; padding: 20px; border-radius: 8px; border-left: 3px solid var(--secondary);" class="scale-in">
-                    <h3 style="color: var(--secondary);">Research Presentation Summary</h3>
-                    <ul style="text-align: left; margin-top: 15px;">
-                        <li>n8n provides a powerful open-source alternative for workflow automation</li>
-                        <li>Practical implementation can achieve 30-50% productivity improvements</li>
-                        <li>A phased approach ensures successful adoption and measurable results</li>
-                        <li>The developed framework can be adapted to different organizational contexts</li>
-                        <li>This research contributes to academic knowledge in automation studies</li>
+                <div style="max-width: 500px; margin: 25px auto; background: white; padding: 20px; border-radius: 8px; border-right: 3px solid var(--secondary);" class="scale-in">
+                    <h3 style="color: var(--secondary);">ملخص عرض البحث</h3>
+                    <ul style="text-align: right; margin-top: 15px;">
+                        <li>توفر n8n بديلاً قوياً مفتوح المصدر لأتمتة سير العمل</li>
+                        <li>يمكن للتنفيذ العملي تحقيق تحسينات في الإنتاجية بنسبة ٣٠-٥٠٪</li>
+                        <li>يضمن النهج التدريجي التبني الناجح والنتائج القابلة للقياس</li>
+                        <li>يمكن تكييف الإطار المطور مع سياقات تنظيمية مختلفة</li>
+                        <li>يساهم هذا البحث في المعرفة الأكاديمية في دراسات الأتمتة</li>
                     </ul>
                 </div>
                 
                 <div style="margin-top: 25px;">
                     <div class="degree-badge" style="font-size: 1rem; padding: 8px 20px;">
-                        <i class="fas fa-award"></i> Master's Thesis Discussion
+                        <i class="fas fa-award"></i> مناقشة عامة  
                     </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <!-- Slide 14: Interactive Simulation of Proposed Systems with n8n -->
+    <!-- الشريحة 14: الأنظمة المقترحة مع محاكاة تفاعلية -->
     <div class="container" id="slide14">
         <div class="slide-header">
             <div>
-                <h1 class="slide-title">Interactive Simulation of Proposed Systems using n8n</h1>
-                <p class="slide-subtitle">Real-time Workflow Representation with all n8n Tools</p>
+                <h1 class="slide-title">محاكاة تفاعلية للأنظمة المقترحة باستخدام n8n</h1>
+                <p class="slide-subtitle">تمثيل سير العمل في الوقت الفعلي مع جميع أدوات n8n</p>
             </div>
-            <div class="slide-number">14</div>
+            <div class="slide-number">١٤</div>
         </div>
         
         <div class="content">
-            <!-- Comprehensive n8n Tools Showcase -->
+            <!-- عرض أدوات n8n -->
             <div class="highlight scale-pulse">
-                <h3 style="color: var(--primary);" class="animation-delay-4s"><i class="fas fa-toolbox"></i> Comprehensive n8n Tools Library</h3>
+                <h3 style="color: var(--primary);" class="animation-delay-4s"><i class="fas fa-toolbox"></i> مكتبة أدوات n8n الشاملة</h3>
                 <div class="tools-showcase">
                     <div class="tool-card">
                         <div class="tool-icon n8n">
                             <i class="fas fa-bolt"></i>
                         </div>
                         <div class="tool-name">n8n</div>
-                        <div class="tool-description">Automation Platform</div>
+                        <div class="tool-description">منصة الأتمتة</div>
                     </div>
                     
                     <div class="tool-card">
@@ -2946,15 +2946,15 @@
                             <i class="fas fa-brain"></i>
                         </div>
                         <div class="tool-name">OpenAI</div>
-                        <div class="tool-description">Advanced AI</div>
+                        <div class="tool-description">ذكاء اصطناعي متقدم</div>
                     </div>
                     
                     <div class="tool-card">
                         <div class="tool-icon ai-agent">
                             <i class="fas fa-robot"></i>
                         </div>
-                        <div class="tool-name">AI Agent</div>
-                        <div class="tool-description">Intelligent Autonomous Agent</div>
+                        <div class="tool-name">وكيل AI</div>
+                        <div class="tool-description">عامل ذكي مستقل</div>
                     </div>
                     
                     <div class="tool-card">
@@ -2962,7 +2962,7 @@
                             <i class="fab fa-github"></i>
                         </div>
                         <div class="tool-name">GitHub</div>
-                        <div class="tool-description">Source Code Management</div>
+                        <div class="tool-description">إدارة الكود المصدري</div>
                     </div>
                     
                     <div class="tool-card">
@@ -2970,7 +2970,7 @@
                             <i class="fab fa-slack"></i>
                         </div>
                         <div class="tool-name">Slack</div>
-                        <div class="tool-description">Team Communication</div>
+                        <div class="tool-description">تواصل الفريق</div>
                     </div>
                     
                     <div class="tool-card">
@@ -2978,7 +2978,7 @@
                             <i class="fas fa-book"></i>
                         </div>
                         <div class="tool-name">Notion</div>
-                        <div class="tool-description">Knowledge Management</div>
+                        <div class="tool-description">إدارة المعرفة</div>
                     </div>
                     
                     <div class="tool-card">
@@ -2986,7 +2986,7 @@
                             <i class="fas fa-database"></i>
                         </div>
                         <div class="tool-name">PostgreSQL</div>
-                        <div class="tool-description">Relational Database</div>
+                        <div class="tool-description">قاعدة بيانات علائقية</div>
                     </div>
                     
                     <div class="tool-card">
@@ -2994,7 +2994,7 @@
                             <i class="fas fa-leaf"></i>
                         </div>
                         <div class="tool-name">MongoDB</div>
-                        <div class="tool-description">NoSQL Database</div>
+                        <div class="tool-description">قاعدة بيانات NoSQL</div>
                     </div>
                     
                     <div class="tool-card">
@@ -3002,7 +3002,7 @@
                             <i class="fas fa-bolt"></i>
                         </div>
                         <div class="tool-name">Redis</div>
-                        <div class="tool-description">Cache Memory</div>
+                        <div class="tool-description">ذاكرة تخزين مؤقت</div>
                     </div>
                     
                     <div class="tool-card">
@@ -3010,7 +3010,7 @@
                             <i class="fab fa-docker"></i>
                         </div>
                         <div class="tool-name">Docker</div>
-                        <div class="tool-description">Containers & Deployment</div>
+                        <div class="tool-description">حاويات وتوزيع</div>
                     </div>
                     
                     <div class="tool-card">
@@ -3018,7 +3018,7 @@
                             <i class="fab fa-whatsapp"></i>
                         </div>
                         <div class="tool-name">WhatsApp</div>
-                        <div class="tool-description">Instant Messaging</div>
+                        <div class="tool-description">مراسلة فورية</div>
                     </div>
                     
                     <div class="tool-card">
@@ -3026,30 +3026,30 @@
                             <i class="fab fa-twitter"></i>
                         </div>
                         <div class="tool-name">Twitter</div>
-                        <div class="tool-description">Social Media</div>
+                        <div class="tool-description">وسائل التواصل</div>
                     </div>
                 </div>
             </div>
             
-            <!-- System 1: Integrated Smart HR System -->
+            <!-- النظام 1: نظام الموارد البشرية الذكي -->
             <div class="system-overview">
                 <div class="project-header">
                     <div class="project-title">
                         <i class="fas fa-users-cog" style="color: var(--secondary);"></i>
-                        System 1: Integrated Smart HR System
+                        النظام ١: نظام الموارد البشرية الذكي المتكامل
                     </div>
-                    <div class="project-badge">Live Interactive Simulation</div>
+                    <div class="project-badge">محاكاة تفاعلية مباشرة</div>
                 </div>
                 
                 <div class="workflow-simulator">
                     <div class="workflow-header">
                         <div class="workflow-title">
                             <i class="fas fa-project-diagram"></i>
-                            Workflow: Automated Employee Request Processing
+                            سير العمل: معالجة طلبات الموظفين الآلية
                         </div>
                         <div class="workflow-status">
                             <i class="fas fa-circle"></i>
-                            Running
+                            قيد التشغيل
                         </div>
                     </div>
                     
@@ -3059,8 +3059,8 @@
                                 <div class="node-icon">
                                     <i class="fas fa-envelope-open-text"></i>
                                 </div>
-                                <div class="node-name">Receive Requests</div>
-                                <div class="node-description">Email Trigger</div>
+                                <div class="node-name">استقبال الطلبات</div>
+                                <div class="node-description">مشغل البريد</div>
                             </div>
                             
                             <div class="connection-line"></div>
@@ -3069,7 +3069,7 @@
                                 <div class="node-icon">
                                     <i class="fas fa-brain"></i>
                                 </div>
-                                <div class="node-name">Text Analysis</div>
+                                <div class="node-name">تحليل النص</div>
                                 <div class="node-description">OpenAI</div>
                             </div>
                             
@@ -3079,8 +3079,8 @@
                                 <div class="node-icon">
                                     <i class="fas fa-robot"></i>
                                 </div>
-                                <div class="node-name">Intelligent Processing</div>
-                                <div class="node-description">AI Agent</div>
+                                <div class="node-name">معالجة ذكية</div>
+                                <div class="node-description">وكيل AI</div>
                             </div>
                             
                             <div class="connection-line"></div>
@@ -3089,7 +3089,7 @@
                                 <div class="node-icon">
                                     <i class="fas fa-database"></i>
                                 </div>
-                                <div class="node-name">Update Data</div>
+                                <div class="node-name">تحديث البيانات</div>
                                 <div class="node-description">PostgreSQL</div>
                             </div>
                             
@@ -3099,7 +3099,7 @@
                                 <div class="node-icon">
                                     <i class="fab fa-slack"></i>
                                 </div>
-                                <div class="node-name">Send Notification</div>
+                                <div class="node-name">إرسال الإشعار</div>
                                 <div class="node-description">Slack</div>
                             </div>
                         </div>
@@ -3108,63 +3108,63 @@
                         
                         <div class="workflow-stats">
                             <div class="stat-item">
-                                <div class="stat-value" id="hr-processing">98.5%</div>
-                                <div class="stat-label">Analysis Accuracy</div>
+                                <div class="stat-value" id="hr-processing">٩٨.٥٪</div>
+                                <div class="stat-label">دقة التحليل</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-value" id="hr-requests">350</div>
-                                <div class="stat-label">Requests/Day</div>
+                                <div class="stat-value" id="hr-requests">٣٥٠</div>
+                                <div class="stat-label">طلب/يوم</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-value" id="hr-speed">0.5s</div>
-                                <div class="stat-label">Processing Time</div>
+                                <div class="stat-value" id="hr-speed">٠.٥ث</div>
+                                <div class="stat-label">وقت المعالجة</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-value" id="hr-reliability">100%</div>
-                                <div class="stat-label">Reliability</div>
+                                <div class="stat-value" id="hr-reliability">١٠٠٪</div>
+                                <div class="stat-label">الموثوقية</div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="live-demo">
-                        <h3 style="color: white;" class="animation-delay-4s"><i class="fas fa-play-circle"></i> Live Simulation Experience</h3>
+                        <h3 style="color: white;" class="animation-delay-4s"><i class="fas fa-play-circle"></i> تجربة المحاكاة المباشرة</h3>
                         <div class="demo-controls">
                             <button class="demo-btn" onclick="startHRWorkflow()">
-                                <i class="fas fa-play"></i> Start Processing
+                                <i class="fas fa-play"></i> بدء المعالجة
                             </button>
                             <button class="demo-btn" onclick="simulateHRRequest()">
-                                <i class="fas fa-plus"></i> New Request
+                                <i class="fas fa-plus"></i> طلب جديد
                             </button>
                             <button class="demo-btn" onclick="resetHRWorkflow()">
-                                <i class="fas fa-redo"></i> Reset
+                                <i class="fas fa-redo"></i> إعادة تعيين
                             </button>
                         </div>
                         <div class="demo-output" id="hr-demo-output">
-                            ⏳ Ready to start... Click "Start Processing"
+                            ⏳ جاهز للبدء... اضغط "بدء المعالجة"
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- System 2: Smart Multi-Channel Customer Service -->
+            <!-- النظام 2: نظام خدمة العملاء الذكي -->
             <div class="system-overview">
                 <div class="project-header">
                     <div class="project-title">
                         <i class="fas fa-headset" style="color: var(--secondary);"></i>
-                        System 2: Smart Multi-Channel Customer Service
+                        النظام ٢: خدمة العملاء الذكية متعددة القنوات
                     </div>
-                    <div class="project-badge">Live Chat Simulation</div>
+                    <div class="project-badge">محاكاة دردشة مباشرة</div>
                 </div>
                 
                 <div class="workflow-simulator">
                     <div class="workflow-header">
                         <div class="workflow-title">
                             <i class="fas fa-comments"></i>
-                            Workflow: Intelligent Automated Support
+                            سير العمل: الدعم الآلي الذكي
                         </div>
                         <div class="workflow-status">
                             <i class="fas fa-circle"></i>
-                            Active - 5000 conversations
+                            نشط - ٥٠٠٠ محادثة
                         </div>
                     </div>
                     
@@ -3182,7 +3182,7 @@
                                 <div class="node-icon">
                                     <i class="fas fa-envelope"></i>
                                 </div>
-                                <div class="node-name">Email</div>
+                                <div class="node-name">البريد</div>
                                 <div class="node-description">SMTP</div>
                             </div>
                             
@@ -3202,7 +3202,7 @@
                                 <div class="node-icon">
                                     <i class="fas fa-language"></i>
                                 </div>
-                                <div class="node-name">Language Understanding</div>
+                                <div class="node-name">فهم اللغة</div>
                                 <div class="node-description">NLP</div>
                             </div>
                             
@@ -3212,84 +3212,84 @@
                                 <div class="node-icon">
                                     <i class="fas fa-robot"></i>
                                 </div>
-                                <div class="node-name">Response Generation</div>
+                                <div class="node-name">توليد الرد</div>
                                 <div class="node-description">AI Agent</div>
                             </div>
                         </div>
                         
                         <div class="workflow-stats">
                             <div class="stat-item">
-                                <div class="stat-value">92%</div>
-                                <div class="stat-label">Understanding Accuracy</div>
+                                <div class="stat-value">٩٢٪</div>
+                                <div class="stat-label">دقة الفهم</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-value">0.3s</div>
-                                <div class="stat-label">Response Time</div>
+                                <div class="stat-value">٠.٣ث</div>
+                                <div class="stat-label">زمن الاستجابة</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-value">70%</div>
-                                <div class="stat-label">Auto-Solved</div>
+                                <div class="stat-value">٧٠٪</div>
+                                <div class="stat-label">حل تلقائي</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-value">88%</div>
-                                <div class="stat-label">Customer Satisfaction</div>
+                                <div class="stat-value">٨٨٪</div>
+                                <div class="stat-label">رضا العملاء</div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="live-demo">
-                        <h3 style="color: white;" class="animation-delay-4s"><i class="fas fa-comment-dots"></i> Live Chat Simulation</h3>
+                        <h3 style="color: white;" class="animation-delay-4s"><i class="fas fa-comment-dots"></i> محاكاة الدردشة المباشرة</h3>
                         <div class="demo-controls">
                             <button class="demo-btn" onclick="startCustomerService()">
-                                <i class="fas fa-comments"></i> Start Chat
+                                <i class="fas fa-comments"></i> بدء المحادثة
                             </button>
                             <button class="demo-btn" onclick="sendCustomerMessage()">
-                                <i class="fas fa-paper-plane"></i> Send Inquiry
+                                <i class="fas fa-paper-plane"></i> إرسال استفسار
                             </button>
                             <button class="demo-btn" onclick="escalateToHuman()">
-                                <i class="fas fa-user-headset"></i> Escalate to Human
+                                <i class="fas fa-user-headset"></i> تحويل لبشر
                             </button>
                         </div>
                         <div class="demo-output" id="chat-demo-output">
-                            🤖 Hello! I'm the smart customer service assistant. How can I help you?
+                            🤖 مرحباً! أنا مساعد خدمة العملاء الذكي. كيف يمكنني مساعدتك؟
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Technologies Summary -->
-            <div style="text-align: center; margin-top: 30px; padding: 25px; background: white; border-radius: 12px; border-left: 4px solid var(--accent);" class="scale-in">
-                <h2 style="color: var(--primary); margin-bottom: 18px;" class="animation-delay-4s"><i class="fas fa-rocket" style="color: var(--secondary);"></i> Advanced n8n Capabilities</h2>
+            <!-- ملخص التقنيات -->
+            <div style="text-align: center; margin-top: 30px; padding: 25px; background: white; border-radius: 12px; border-right: 4px solid var(--accent);" class="scale-in">
+                <h2 style="color: var(--primary); margin-bottom: 18px;" class="animation-delay-4s"><i class="fas fa-rocket" style="color: var(--secondary);"></i> إمكانيات n8n المتقدمة</h2>
                 
                 <div class="integration-grid" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
                     <div class="integration-item">
                         <div class="integration-icon" style="color: var(--secondary);">
                             <i class="fas fa-puzzle-piece"></i>
                         </div>
-                        <div class="integration-title">+300 Integrated Tools</div>
-                        <div class="integration-desc">Seamless integration with all major platforms</div>
+                        <div class="integration-title">+٣٠٠ أداة متكاملة</div>
+                        <div class="integration-desc">تكامل سلس مع جميع المنصات الرئيسية</div>
                     </div>
                     
                     <div class="integration-item">
                         <div class="integration-icon" style="color: var(--secondary);">
                             <i class="fas fa-infinity"></i>
                         </div>
-                        <div class="integration-title">Unlimited Complexity</div>
-                        <div class="integration-desc">Build complex multi-stage workflows</div>
+                        <div class="integration-title">تعقيد غير محدود</div>
+                        <div class="integration-desc">بناء سير عمل معقد متعدد المراحل</div>
                     </div>
                     
                     <div class="integration-item">
                         <div class="integration-icon" style="color: var(--secondary);">
                             <i class="fas fa-bolt"></i>
                         </div>
-                        <div class="integration-title">Real-time Processing</div>
-                        <div class="integration-desc">Instant response to events</div>
+                        <div class="integration-title">معالجة فورية</div>
+                        <div class="integration-desc">استجابة فورية للأحداث</div>
                     </div>
                 </div>
                 
                 <div style="margin-top: 20px;">
                     <div class="degree-badge" style="background: linear-gradient(135deg, #fff9c4, #ffecb3);">
-                        <i class="fas fa-check-circle" style="color: var(--accent);"></i> All systems are immediately deployable
+                        <i class="fas fa-check-circle" style="color: var(--accent);"></i> جميع الأنظمة قابلة للتنفيذ الفوري
                     </div>
                 </div>
             </div>
@@ -3355,9 +3355,9 @@
         nextBtn.addEventListener('click', nextSlide);
         
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
                 prevSlide();
-            } else if (e.key === 'ArrowRight') {
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
                 nextSlide();
             }
         });
@@ -3373,11 +3373,11 @@
             const output = document.getElementById('hr-demo-output');
             if (output) {
                 output.innerHTML = `
-                    <span style="color: var(--secondary);">▶️ Starting employee request processing...</span><br>
-                    ✅ Email trigger activated<br>
-                    🤖 AI Agent ready to analyze requests<br>
-                    💾 PostgreSQL connected and running<br>
-                    📢 Slack notifications enabled
+                    <span style="color: var(--secondary);">▶️ جاري بدء معالجة طلبات الموظفين...</span><br>
+                    ✅ تم تفعيل مشغل البريد الإلكتروني<br>
+                    🤖 وكيل AI جاهز لتحليل الطلبات<br>
+                    💾 PostgreSQL متصل ويعمل<br>
+                    📢 إشعارات Slack مفعلة
                 `;
             }
             
@@ -3388,24 +3388,24 @@
             
             setTimeout(() => {
                 if (output) {
-                    output.innerHTML += '<br><br>✅ System ready to receive requests';
+                    output.innerHTML += '<br><br>✅ النظام جاهز لاستقبال الطلبات';
                 }
             }, 2000);
         }
         
         function simulateHRRequest() {
             if (!hrWorkflowActive) {
-                alert('Please start the system first!');
+                alert('الرجاء بدء تشغيل النظام أولاً!');
                 return;
             }
             
             hrRequests++;
             const requests = [
-                'Sick leave request for 3 days',
-                'Salary data update',
-                'Training request in AI field',
-                'Quarterly performance report',
-                'New office equipment request'
+                'طلب إجازة مرضية لمدة ٣ أيام',
+                'تعديل بيانات الراتب',
+                'طلب تدريب في مجال الذكاء الاصطناعي',
+                'تقرير أداء ربع سنوي',
+                'طلب معدات مكتبية جديدة'
             ];
             
             const randomRequest = requests[Math.floor(Math.random() * requests.length)];
@@ -3413,12 +3413,12 @@
             
             if (output) {
                 output.innerHTML = `
-                    📥 <strong>New request:</strong> ${randomRequest}<br>
-                    🔍 <span style="color: var(--secondary);">Analyzing purpose with OpenAI...</span><br>
-                    🤖 <span style="color: var(--secondary);">AI Agent determining request type</span><br>
-                    💾 <span style="color: var(--secondary);">Updating database...</span><br>
-                    📢 <span style="color: var(--secondary);">Notification sent to relevant department</span><br>
-                    ✅ <strong style="color: var(--accent);">Request processed successfully!</strong>
+                    📥 <strong>طلب جديد:</strong> ${randomRequest}<br>
+                    🔍 <span style="color: var(--secondary);">جاري تحليل الهدف باستخدام OpenAI...</span><br>
+                    🤖 <span style="color: var(--secondary);">وكيل AI يحدد نوع الطلب</span><br>
+                    💾 <span style="color: var(--secondary);">جاري تحديث قاعدة البيانات...</span><br>
+                    📢 <span style="color: var(--secondary);">تم إرسال الإشعار إلى القسم المختص</span><br>
+                    ✅ <strong style="color: var(--accent);">تمت معالجة الطلب بنجاح!</strong>
                 `;
             }
             
@@ -3434,7 +3434,7 @@
             }
             const output = document.getElementById('hr-demo-output');
             if (output) {
-                output.innerHTML = '⏳ Ready to start... Click "Start Processing"';
+                output.innerHTML = '⏳ جاهز للبدء... اضغط "بدء المعالجة"';
             }
             document.getElementById('hr-requests').textContent = '350';
         }
@@ -3442,23 +3442,23 @@
         function startCustomerService() {
             chatActive = true;
             chatMessages = [
-                { sender: 'bot', text: 'Hello! I am the smart customer service assistant. How can I help you today?' }
+                { sender: 'bot', text: 'مرحباً! أنا مساعد خدمة العملاء الذكي. كيف يمكنني مساعدتك اليوم؟' }
             ];
             updateChatDisplay();
         }
         
         function sendCustomerMessage() {
             if (!chatActive) {
-                alert('Please start the chat first!');
+                alert('الرجاء بدء المحادثة أولاً!');
                 return;
             }
             
             const customerMessages = [
-                'I want to know the status of my order',
-                'I have a problem with the product',
-                'How can I change my password?',
-                'I need the purchase invoice',
-                'What are the working hours?'
+                'أريد معرفة حالة طلبي',
+                'لدي مشكلة في المنتج',
+                'كيف يمكنني تغيير كلمة المرور؟',
+                'أحتاج فاتورة الشراء',
+                'ما هي ساعات العمل؟'
             ];
             
             const randomMessage = customerMessages[Math.floor(Math.random() * customerMessages.length)];
@@ -3466,14 +3466,14 @@
             
             setTimeout(() => {
                 const botResponses = [
-                    'Searching for your order information...',
-                    'I will transfer you to the relevant department.',
-                    'You can change your password in settings.',
-                    'I will send the invoice to your email.',
-                    'Working hours are from 9 AM to 6 PM.'
+                    'جاري البحث عن معلومات طلبك...',
+                    'سأقوم بتحويلك إلى القسم المختص.',
+                    'يمكنك تغيير كلمة المرور من الإعدادات.',
+                    'سأرسل الفاتورة إلى بريدك الإلكتروني.',
+                    'ساعات العمل من ٩ صباحاً إلى ٦ مساءً.'
                 ];
                 
-                const botResponse = botResponses[customerMessages.indexOf(randomMessage)] || 'Thank you for contacting us. I will assist you with that.';
+                const botResponse = botResponses[customerMessages.indexOf(randomMessage)] || 'شكراً لتواصلك معنا. سأساعدك في ذلك.';
                 chatMessages.push({ sender: 'bot', text: botResponse });
                 updateChatDisplay();
             }, 1000);
@@ -3485,7 +3485,7 @@
             if (!chatActive) return;
             chatMessages.push({ 
                 sender: 'system', 
-                text: '📞 The conversation has been transferred to a customer service agent. They will contact you shortly.' 
+                text: '📞 تم تحويل المحادثة إلى موظف خدمة العملاء. سيتواصل معك قريباً.' 
             });
             updateChatDisplay();
         }
@@ -3497,12 +3497,12 @@
             let html = '';
             chatMessages.forEach(msg => {
                 if (msg.sender === 'bot') {
-                    html += `<div style="text-align: left; margin: 8px 0; padding: 8px; background: rgba(46, 204, 113, 0.1); border-radius: 8px; border-left: 2px solid var(--accent);">
-                        <strong>🤖 Assistant:</strong> ${msg.text}
+                    html += `<div style="text-align: right; margin: 8px 0; padding: 8px; background: rgba(46, 204, 113, 0.1); border-radius: 8px; border-right: 2px solid var(--accent);">
+                        <strong>🤖 المساعد:</strong> ${msg.text}
                     </div>`;
                 } else if (msg.sender === 'customer') {
-                    html += `<div style="text-align: right; margin: 8px 0; padding: 8px; background: rgba(52, 152, 219, 0.1); border-radius: 8px; border-right: 2px solid var(--secondary);">
-                        <strong>👤 Customer:</strong> ${msg.text}
+                    html += `<div style="text-align: left; margin: 8px 0; padding: 8px; background: rgba(52, 152, 219, 0.1); border-radius: 8px; border-left: 2px solid var(--secondary);">
+                        <strong>👤 العميل:</strong> ${msg.text}
                     </div>`;
                 } else {
                     html += `<div style="text-align: center; margin: 8px 0; padding: 8px; background: rgba(231, 76, 60, 0.1); border-radius: 8px;">
@@ -3513,14 +3513,13 @@
             output.innerHTML = html;
         }
         
-        function switchToArabic() {
-
+        function switchToEnglish() {
         }
         
         updateSlide();
         
-        console.log('🎓 Research plan presentation ready - English version');
-        console.log('🎨 Colors: Primary #2c3e50, Secondary #3498db, Accent #2ecc71');
+        console.log('🎓 عرض خطة البحث جاهز - نظام الألوان الجديد');
+        console.log('🎨 الألوان: Primary #2c3e50, Secondary #3498db, Accent #2ecc71');
     </script>
 </body>
 </html>
